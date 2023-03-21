@@ -20,6 +20,7 @@ body.debug{
 .justifySpaceBetween{justify-content: space-between;}
 .alignItemsCenter{align-items: center;}
 .alignFlexStart{align-items: flex-start;}
+.alignFlexEnd{align-items: flex-end;}
 .directionColumn{flex-direction: column;}
 
 .textAlingCenter{text-align: center;}
@@ -44,6 +45,9 @@ body.debug{
 .primaryColor{background-color: #0084fd;}
 .secondaryColor{background-color: #9792e4;}
 .whiteColor{background-color: white;}
+
+.txtWhite{color: white;}
+.txtSecondary{color: #9792e4;}
 
 .myButton {
 	box-shadow: 2px 2px 0px 0px #c4c4c4;
@@ -78,13 +82,26 @@ body.debug{
 	background-color:#329efc;
 }
 
+.myButton.CSecondary{
+    box-shadow: 3px 4px 0px 0px #807be0;
+	background:linear-gradient(to bottom, #9792e4 5%, #a7a3e6 100%);
+	background-color:#9792e4;
+	border-radius:15px;
+	border:1px solid #9792e4;
+}
+.myButton.myButton.CSecondary:hover {
+	background:linear-gradient(to bottom, #a7a3e6 5%, #9792e4 100%);
+	background-color:#a7a3e6;
+}
+
 img{
     width: 100%;
     display: block;
 }
-
+h2{font-size: 1.5rem;}
 h3{font-size: 1.25rem;}
 p{font-size: 1rem;}
+.FS1_3{font-size: 1.3rem;}
 /******** HEADER **********/
 
 header{
@@ -130,11 +147,22 @@ header .navbar a:hover{color: #5044fd;}
 .hero h3{color: #0084fd;}
 .card{
     width: 100%;
-    border-radius: 20px;
+    border-radius: 40px;
 }
 
 .card-content{
     width: 100%;
+}
+
+.plan .whiteColor .card-content:first-child img{
+    width: 50%;
+}
+
+.arrowBut{
+    border-radius: 100px;
+    padding: 1rem 1.2rem;
+    border: none;
+    background-color: #9792e4;
 }
 
 .picture{
@@ -146,9 +174,21 @@ header .navbar a:hover{color: #5044fd;}
     aspect-ratio: 1/1;
 }
 
+.violetText{color: #9792e4;}
+
 .testimonial1{
     background-image: url(../img/testimonial1.jpg);
 }
+.testimonial2{
+    background-image: url(../img/testimonial2.jpg);
+}
+.testimonial3{
+    background-image: url(../img/testimonial3.jpg);
+}
+
+.FS1_3 h2{font-size: 1.5em;}
+.FS1_3 h3{font-size: 1.25em;}
+.FS1_3 p{font-size: 1em;}
 
 .aboutImg{
     background-image: url(../img/about.jpg);
@@ -158,6 +198,11 @@ header .navbar a:hover{color: #5044fd;}
     width: 100%;
 }
 
+.gigaNumber{font-size: 4rem;}
+
+.WWU .myButton.CSecondary{
+    padding: 0.3rem 2rem;
+}
 /********* FOOTER *********/
 footer{
     background-color: #222;
@@ -166,16 +211,6 @@ footer{
 footer p:first-child{
     padding-bottom: 4rem;
 }
-/****** MEDIA QUERY TABLET *******/
-/*
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    body.debug{
-        background-color: rgb(157, 165, 42);
-    }
-    .boxed{
-        width: 90%;
-    }
-}/*
 
 /****** MEDIA QUERY TABLET  *******/
 @media screen and (min-width: 769px) {
@@ -193,12 +228,15 @@ footer p:first-child{
     .hero .card:first-child{
         width: calc( ( (100%/3)*2) - (0.669rem))
     }
-    .testimonials .card-content{
-        width: calc(50% - 1rem);
+    .testimonials .row .card-content:first-child{
+        width: calc(20% - 1rem);
     }
-    .picture{
+    .testimonials .row .card-content:last-child{
+        width: calc(80% - 1rem);
+    }
+    /* .picture{
         width: 30%;
-    }
+    } */
     /****benefits e about us****/
     .benefits .card{
         width: calc(50% - 1rem);
