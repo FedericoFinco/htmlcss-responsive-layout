@@ -7,6 +7,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+a, a:visited, a:hover, a:active { color:white; }
+a{text-decoration: none;}
 
 body.debug{
     background-color: rgb(145, 42, 16);
@@ -17,6 +19,7 @@ body.debug{
 .justifyCenter{justify-content: center;}
 .justifySpaceBetween{justify-content: space-between;}
 .alignItemsCenter{align-items: center;}
+.alignFlexStart{align-items: flex-start;}
 .directionColumn{flex-direction: column;}
 
 .textAlingCenter{text-align: center;}
@@ -32,6 +35,7 @@ body.debug{
 
 .pad2{padding: 2rem;}
 .gap2{gap: 2rem;}
+.gap{gap: 1rem;}
 
 
 .row{display: flex;
@@ -41,6 +45,46 @@ body.debug{
 .secondaryColor{background-color: #9792e4;}
 .whiteColor{background-color: white;}
 
+.myButton {
+	box-shadow: 2px 2px 0px 0px #c4c4c4;
+	background:linear-gradient(to bottom, #f7faf8 5%, #e8e8e8 100%);
+	background-color:#f7faf8;
+	border-radius:100px;
+	border:1px solid #c9c9c9;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	padding:6px 15px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #e8e8e8 5%, #f7faf8 100%);
+	background-color:#e8e8e8;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton.CBlue{
+    background:linear-gradient(to bottom, #0083fd 5%, #329efc 100%);
+	background-color:#0083fd;
+    color:#ffffff;
+    box-shadow: 2px 2px 0px 0px #0467bd;
+    border:1px solid #0a6fc7;
+}
+.myButton.CBlue:hover {
+	background:linear-gradient(to bottom, #329efc 5%, #0083fd 100%);
+	background-color:#329efc;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+h3{font-size: 1.25rem;}
+p{font-size: 1rem;}
 /******** HEADER **********/
 
 header{
@@ -55,6 +99,9 @@ header{
     margin: 0 auto;
 }
 
+header .navbar button>a {color: black;}
+header .navbar a:hover{color: #5044fd;}
+
 /************** MAIN **********/
 .hero{
     border-radius: 20px;
@@ -62,8 +109,28 @@ header{
     margin-bottom: 3rem;
 }
 
+.hero .card{
+    background-color: #b5ddff;
+}
+
+.hero .myButton i{
+    padding-right: 1rem;
+    font-size: 1rem;
+}
+.hero i{
+    font-size: 5rem;
+}
+.hero .myButton.CBlue{
+    padding: 0.3rem 2rem;
+}
+
+.hero .card:first-child .card-content:last-child
+{width: 50%;}
+
+.hero h3{color: #0084fd;}
 .card{
     width: 100%;
+    border-radius: 20px;
 }
 
 .card-content{
