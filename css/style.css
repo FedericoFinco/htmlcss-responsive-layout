@@ -14,9 +14,12 @@ body.debug{
 
 .flex{display: flex;}
 
+.justifyCenter{justify-content: center;}
 .justifySpaceBetween{justify-content: space-between;}
 .alignItemsCenter{align-items: center;}
 .directionColumn{flex-direction: column;}
+
+.textAlingCenter{text-align: center;}
 
 .padY{
     padding-top: 1rem;
@@ -67,7 +70,35 @@ header{
     width: 100%;
 }
 
+.picture{
+    display: inline-block;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
 
+.testimonial1{
+    background-image: url(../img/testimonial1.jpg);
+}
+
+.aboutImg{
+    background-image: url(../img/about.jpg);
+}
+
+.aboutUs .picture{
+    width: 100%;
+}
+
+/********* FOOTER *********/
+footer{
+    background-color: #222;
+}
+
+footer p:first-child{
+    padding-bottom: 4rem;
+}
 /****** MEDIA QUERY TABLET *******/
 /*
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -81,45 +112,71 @@ header{
 
 /****** MEDIA QUERY TABLET  *******/
 @media screen and (min-width: 769px) {
+    /*** utility e debug***/
     body.debug{
         background-color: rgb(4, 128, 0);
     }
     .boxed{
         max-width: 800px;
     }
+    /****main hero plan e testimonials****/
     .hero .card{
         width: calc((100% / 3) - (4rem / 3));
     }
     .hero .card:first-child{
         width: calc( ( (100%/3)*2) - (0.669rem))
     }
+    .testimonials .card-content{
+        width: calc(50% - 1rem);
+    }
+    .picture{
+        width: 30%;
+    }
+    /****benefits e about us****/
+    .benefits .card{
+        width: calc(50% - 1rem);
+    }
+    .aboutUs .card:first-child{
+        width: calc(70% - 2rem);
+    }
+    .aboutUs .card{
+        width: 30%;
+    }
 }
 
 /****** MEDIA QUERY desktop *******/
 @media screen and (min-width: 992px) {
+    /*** utility e debug***/
     body.debug{
         background-color: rgb(16, 119, 145);
     }
+    .boxed{
+        max-width: 1000px;
+    }
+    /**** header****/
     .hamb{
         display: none;
     }
     .navbar{
         display: inherit;
     }
-    .boxed{
-        max-width: 1000px;
-    }
+    /****main hero plan e testimonials****/
     .plan .card{
         width: calc(50% - 1rem);
     }
     .hero .card:first-child .card-content{
         width: 50%;
     }
-    
+    /****benefits ****/
+    .benefits .card{
+        width: calc((100% / 3) - (4rem / 3));
+    }
+
 }
 
 /****** MEDIA QUERY large desktop *******/
 @media screen and (min-width: 1201px) {
+    /*** utility e debug***/
     body.debug{
         background-color: rgb(18, 16, 145);
     }
