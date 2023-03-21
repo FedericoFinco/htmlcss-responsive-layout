@@ -14,8 +14,9 @@ body.debug{
     background-color: rgb(145, 42, 16);
 }
 
-.flex{display: flex;}
+.posRelative{position: relative;}
 
+.flex{display: flex;}
 .justifyCenter{justify-content: center;}
 .justifySpaceBetween{justify-content: space-between;}
 .alignItemsCenter{align-items: center;}
@@ -48,6 +49,8 @@ body.debug{
 
 .txtWhite{color: white;}
 .txtSecondary{color: #9792e4;}
+.txtOrange{color: #fdc15f;}
+.txtGrey{color: rgba(107, 106, 106, 0.637);}
 
 .myButton {
 	box-shadow: 2px 2px 0px 0px #c4c4c4;
@@ -89,9 +92,25 @@ body.debug{
 	border-radius:15px;
 	border:1px solid #9792e4;
 }
-.myButton.myButton.CSecondary:hover {
+.myButton.CSecondary:hover {
 	background:linear-gradient(to bottom, #a7a3e6 5%, #9792e4 100%);
 	background-color:#a7a3e6;
+}
+
+.myButton.bottomBut{
+    box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ffffff 5%, #e6e6e6 100%);
+	background-color:#ffffff;
+	border-radius:25px;
+	border:1px solid #cccccc;
+    padding:15px 60px;
+}
+.myButton.bottomBut:hover {
+	background:linear-gradient(to bottom, #e6e6e6 5%, #ffffff 100%);
+	background-color:#e6e6e6;
+}
+.myButton.bottomBut>a{
+    color: #000000;
 }
 
 img{
@@ -190,12 +209,17 @@ header .navbar a:hover{color: #5044fd;}
 .FS1_3 h3{font-size: 1.25em;}
 .FS1_3 p{font-size: 1em;}
 
+.FS2 {font-size: 2rem;}
+.FS2 h2{font-size: 2em;}
+.FS2 h3{font-size: 1.25em;}
+.FS2 h4{font-size: 1em;}
+
 .aboutImg{
     background-image: url(../img/about.jpg);
 }
 
 .aboutUs .picture{
-    width: 100%;
+    width: 70%;
 }
 
 .gigaNumber{font-size: 4rem;}
@@ -203,9 +227,17 @@ header .navbar a:hover{color: #5044fd;}
 .WWU .myButton.CSecondary{
     padding: 0.3rem 2rem;
 }
+
+.bigQuote{
+    font-size: 3rem;
+    color: #9792e4;
+    position: absolute;
+    right: 33%;
+}
 /********* FOOTER *********/
 footer{
     background-color: #222;
+    color: white;
 }
 
 footer p:first-child{
