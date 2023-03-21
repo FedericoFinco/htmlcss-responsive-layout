@@ -16,17 +16,31 @@ body.debug{
 
 .justifySpaceBetween{justify-content: space-between;}
 .alignItemsCenter{align-items: center;}
+.directionColumn{flex-direction: column;}
 
-.pad05{padding: 0.5rem;}
+.padY{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.padY2{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 
-.gap{gap: 0.5rem;}
+.pad2{padding: 2rem;}
+.gap2{gap: 2rem;}
+
 
 .row{display: flex;
     flex-wrap: wrap;}
 
+.primaryColor{background-color: #0084fd;}
+.secondaryColor{background-color: #9792e4;}
+.whiteColor{background-color: white;}
+
 /******** HEADER **********/
 
-header{background-color: #0084fd;
+header{
     width: 100%;}
 
 .navbar{display: none;}
@@ -34,7 +48,7 @@ header{background-color: #0084fd;
 .hamb {font-size: 2rem;}
 
 .boxed{
-    width: 90%;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -45,34 +59,44 @@ header{background-color: #0084fd;
     margin-bottom: 3rem;
 }
 
+.card{
+    width: 100%;
+}
+
+.card-content{
+    width: 100%;
+}
+
+
 /****** MEDIA QUERY TABLET *******/
+/*
 @media screen and (min-width: 481px) and (max-width: 768px) {
     body.debug{
         background-color: rgb(157, 165, 42);
     }
-    /* .boxed{
+    .boxed{
         width: 90%;
-    } */
-}
+    }
+}/*
 
-/****** MEDIA QUERY desktop *******/
-@media screen and (min-width: 769px) and (max-width: 992px) {
+/****** MEDIA QUERY TABLET  *******/
+@media screen and (min-width: 769px) {
     body.debug{
         background-color: rgb(4, 128, 0);
     }
-    /* .boxed{
-        width: 90%;
-    } */
-    .hamb{
-        display: none;
+    .boxed{
+        max-width: 800px;
     }
-    .navbar{
-        display: inherit;
+    .hero .card{
+        width: calc((100% / 3) - (4rem / 3));
+    }
+    .hero .card:first-child{
+        width: calc( ( (100%/3)*2) - (0.669rem))
     }
 }
 
-/****** MEDIA QUERY large desktop *******/
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+/****** MEDIA QUERY desktop *******/
+@media screen and (min-width: 992px) {
     body.debug{
         background-color: rgb(16, 119, 145);
     }
@@ -83,19 +107,32 @@ header{background-color: #0084fd;
         display: inherit;
     }
     .boxed{
-        max-width: 1100px;
+        max-width: 1000px;
     }
+    .plan .card{
+        width: calc(50% - 1rem);
+    }
+    .hero .card:first-child .card-content{
+        width: 50%;
+    }
+    
 }
 
-/****** MEDIA QUERY  very large desktop *******/
+/****** MEDIA QUERY large desktop *******/
 @media screen and (min-width: 1201px) {
     body.debug{
         background-color: rgb(18, 16, 145);
     }
+    .boxed{
+        max-width: 1300px;
+    }
 }
+
+
 
 /*********** DEBUG **********/
 .debugYellow{background-color: yellowgreen;}
+.debugGreen{background-color: green;}
 .debugHeight1{height:200px}
 .debugHeight2{height:300px}
 .debugHeight3{height:400px}
